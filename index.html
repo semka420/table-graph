@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблица с графиком</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:regular, 900" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <table id="data-table">
+            <thead>
+                <tr>
+                    <th>Показатель</th>
+                    <th>Текущий день</th>
+                    <th>Вчера</th>
+                    <th>Этот день недели</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-chart="revenue">
+                    <td>Выручка, руб.</td>
+                    <td>500 521</td>
+                    <td class="positive">480 521 <span>4%</span></td>
+                    <td class="negative">4 805 121</td>
+                </tr>
+                <tr data-chart="cash">
+                    <td>Наличные</td>
+                    <td>300 000</td>
+                    <td class="positive">300 000 <span>0%</span></td>
+                    <td>300 000</td>
+                </tr>
+                <tr data-chart="non-cash">
+                    <td>Безналичный расчет</td>
+                    <td>100 000</td>
+                    <td class="positive">100 000<span>0%</span></td>
+                    <td>100 000</td>
+                </tr> 
+                <tr data-chart="credit">
+                    <td>Кредитные карты</td>
+                    <td>100 521</td>
+                    <td class="positive">100 521<span>0%</span></td>
+                    <td>100 521</td>
+                </tr> 
+                <tr data-chart="sred-check">
+                    <td>Средний чек, руб</td>
+                    <td>1 300</td>
+                    <td class="positive">900<span>44%</span></td>
+                    <td class="positive">900</td>
+                </tr> 
+                <tr data-chart="sred-guest">
+                    <td>Средний гость, руб</td>
+                    <td>1 200</td>
+                    <td class="positive">800<span>50%</span></td>
+                    <td class="positive">800</td>
+                </tr> 
+                <tr data-chart="delete-check-aftr">
+                    <td>Удаления из чека (после оплаты), руб</td>
+                    <td>1 000</td>
+                    <td class="negative">1 100<span>-9%</span></td>
+                    <td class="positive">900</td>
+                </tr> 
+                <tr data-chart="delete-check-before">
+                    <td>Удаления из чека (до оплаты), руб</td>
+                    <td>1 300</td>
+                    <td class="positive">1 300<span>0%</span></td>
+                    <td class="positive">900</td>
+                </tr> 
+                <tr data-chart="count-check">
+                    <td>Количество чеков</td>
+                    <td>34</td>
+                    <td class="negative">36<span>-6%</span></td>
+                    <td>34</td>
+                </tr> 
+                <tr data-chart="count-guest">
+                    <td>Количество гостей</td>
+                    <td>34</td>
+                    <td class="negative">36<span>-6%</span></td>
+                    <td class="positive">32</td>
+                </tr> 
+            </tbody>
+        </table>
+        <div id="graph"></div>
+    </div>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
